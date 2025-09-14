@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">LAB_WEEK_03</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="affogato_title">AFFOGATO</string>
+    <string name="affogato_desc">Espresso dituangkan di atas es krim vanila. Disajikan dalam cangkir cappuccino.</string>
+    <string name="americano_title">AMERICANO</string>
+    <string name="americano_desc">Espresso dengan tambahan air panas (100-150 ml). Biasanya disajikan dalam cangkir cappuccino. (Espresso ditambahkan ke dalam air panas, bukan semua air yang dialirkan melalui kopi karena itu akan menyebabkan over extraction).</string>
+    <string name="latte_title">CAFFE LATTE</string>
+    <string name="latte_desc">Kopi susu lembut dengan volume tinggi (sekitar 150-300 ml). Espresso dengan susu panas dan hanya sedikit busa susu di atasnya. Disajikan dalam gelas latte atau cangkir kopi. Sirup rasa bisa ditambahkan.</string>
+    <string name="coffee_list">Daftar Kopi</string>
 </resources>
