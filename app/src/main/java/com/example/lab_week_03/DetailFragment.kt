@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 
 class DetailFragment : Fragment() {
 
@@ -28,6 +29,11 @@ class DetailFragment : Fragment() {
         // Ambil coffeeId dari arguments (default 0)
         val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
+
+        // Tombol back manual ke ListFragment
+        view.findViewById<View>(R.id.btn_back)?.setOnClickListener {
+            view.findNavController().navigate(R.id.coffeeList)
+        }
     }
 
     private fun setCoffeeData(id: Int) {
@@ -44,12 +50,21 @@ class DetailFragment : Fragment() {
                 coffeeTitle?.text = getString(R.string.latte_title)
                 coffeeDesc?.text = getString(R.string.latte_desc)
             }
+            R.id.cappuccino -> {
+                coffeeTitle?.text = "Cappuccino"
+                coffeeDesc?.text = "Perpaduan espresso, susu panas, dan buih susu."
+            }
+            R.id.espresso -> {
+                coffeeTitle?.text = "Espresso"
+                coffeeDesc?.text = "Kopi pekat klasik dengan rasa kuat dan kaya."
+            }
             else -> {
                 coffeeTitle?.text = getString(R.string.default_title)
                 coffeeDesc?.text = getString(R.string.default_desc)
             }
         }
     }
+
 
     companion object {
         private const val COFFEE_ID = "COFFEE_ID"
